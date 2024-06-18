@@ -4,11 +4,28 @@
 \alias{WechatRobot}
 \title{WechatRobot}
 \usage{
-WechatRobot(key = "", msg = "", meth = "R")
+WechatRobot(
+  key,
+  msg = "",
+  qyapi = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=",
+  msgtype = "text"
+)
 }
 \arguments{
-\item{meth}{}
+\item{key}{The key for the WeChat Work robot.}
+
+\item{msg}{Text message.}
+
+\item{qyapi}{WeChat Work API.}
+
+\item{msgtype}{Type of text message being sent.}
+}
+\value{
+response of the request
 }
 \description{
 WechatRobot
+}
+\examples{
+WechatRobot(key = "79bdbb23-7f7e-4fb6-b669-97f7e744755e", msg = "SaveRds Success!")
 }

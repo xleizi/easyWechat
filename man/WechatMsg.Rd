@@ -4,19 +4,25 @@
 \alias{WechatMsg}
 \title{WechatHelper}
 \usage{
-WechatMsg(userid, text, status = NULL, name = NULL, number = NULL)
+WechatMsg(userid, msg, status = NULL, name = NULL, number = NULL)
 }
 \arguments{
-\item{userid}{请关注公众号"生信通知助手"，回复id，扫描二维码获取userid}
+\item{userid}{Please follow the official WeChat account "shengxintongzhizhushou", reply with id, and scan the QR code to obtain the userid. View "http://bj.s1f.ren/gzh/home.html" for more information.}
 
-\item{text}{需要发生的通知内容}
+\item{msg}{Content of the notification to be sent.}
 
-\item{status}{当前数据状态}
+\item{status}{Current data status.}
 
-\item{name}{项目名称}
+\item{name}{Project name.}
 
-\item{number}{通知编号}
+\item{number}{Notification number.}
+}
+\value{
+response of the request
 }
 \description{
 WechatHelper
+}
+\examples{
+WechatMsg(userid = "123", msg = "SaveRds Success!")
 }
