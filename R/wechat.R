@@ -1,16 +1,16 @@
 #' WechatHelper
 #'
 #' @param userid 请关注公众号"生信通知助手"，回复id，扫描二维码获取userid
-#' @param text 需要发生的通知内容
+#' @param msg 需要发生的通知内容
 #' @param status 当前数据状态
 #' @param name 项目名称
 #' @param number 通知编号
 #'
-#' @return
+#' @return none
 #' @export
 #'
 #' @examples
-WechatMsg <- function(userid, text, status = NULL, name = NULL, number = NULL) {
+WechatMsg <- function(userid, msg, status = NULL, name = NULL, number = NULL) {
   library(httr)
 
   base_url <- "http://bj.s1f.ren/gzh/sendMsg"
@@ -18,7 +18,7 @@ WechatMsg <- function(userid, text, status = NULL, name = NULL, number = NULL) {
   # 构建查询参数
   query_params <- list(
     userid = userid,
-    text = text
+    text = msg
   )
 
   # 添加可选参数（如果提供）
@@ -46,8 +46,8 @@ WechatMsg <- function(userid, text, status = NULL, name = NULL, number = NULL) {
 
 #' WechatRobot_R
 
-#' @param key
-#' @param msg
+#' @param key 机器人的key
+#' @param msg 文本信息
 #' @param qyapi
 #' @param msgtype
 #'
