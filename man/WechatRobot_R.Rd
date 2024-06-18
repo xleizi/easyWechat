@@ -12,6 +12,10 @@ WechatRobot_R(
 )
 }
 \arguments{
+\item{key}{机器人的key}
+
+\item{msg}{文本信息}
+
 \item{msgtype}{}
 }
 \description{
