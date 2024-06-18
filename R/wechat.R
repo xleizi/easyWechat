@@ -45,7 +45,7 @@ WechatMsg <- function(userid, text, status = NULL, name = NULL, number = NULL) {
 
 
 #' WechatRobot_R
-#'
+
 #' @param key
 #' @param msg
 #' @param qyapi
