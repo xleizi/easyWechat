@@ -1,6 +1,6 @@
 #' WechatHelper
 #'
-#' @param userid Please follow the official WeChat account "shengxintongzhizhushou", reply with id, and scan the QR code to obtain the userid. View "http://bj.s1f.ren/gzh/home.html" for more information.
+#' @param userid Please follow the official WeChat account "shengxintongzhizhushou", reply with id, and scan the QR code to obtain the userid. View "http://bj.s1f.ren/gzh/home.html" and "https://mp.weixin.qq.com/s/tiedh3FWTA4hOhut5Useew" for more information.
 #' @param msg  Content of the notification to be sent.
 #' @param status Current data status.
 #' @param name Project name.

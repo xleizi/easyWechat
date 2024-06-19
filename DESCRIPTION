@@ -1,13 +1,16 @@
 Package: easyWechat
 Type: Package
-Title: A notifier for R users by wechat
+Title: A Notifier for R Users by 'WeChat'
 Version: 0.1.0
-Author: Lei Cui
-Maintainer: Lei Cui <cuilei798@qq.com>
-Description: This is a Wechat Notifier for R users to notice when script run complete. 
+Description: This is a 'WeChat' Notifier for R users to notice when script run complete. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
     httr
 RoxygenNote: 7.3.1
+Authors@R: c(
+    person("Lei Cui", "Developer", , "cuilei798@qq.com", role = c("aut", "ctr", "cph", "cre")),
+    person("An Qin", "Researcher", role = c("fnd", "ths")),
+    person("Feng Jiang", "Engineer", role = c("ctb"))
+  )
