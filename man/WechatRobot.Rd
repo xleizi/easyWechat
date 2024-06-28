@@ -27,5 +27,5 @@ response of the request
 WechatRobot
 }
 \examples{
-WechatRobot(key = "79bdbb23-7f7e-4fb6-b669-97f7e744755e", msg = "SaveRds Success!")
+WechatRobot(key = "79bdbb23-7f7e-4fb6-b669-97f7e744755e", msg = "test---SaveRds Success!")
 }

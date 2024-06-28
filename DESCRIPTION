@@ -1,7 +1,7 @@
 Package: easyWechat
 Type: Package
 Title: A Notifier for R Users by 'WeChat'
-Version: 0.1.0
+Version: 0.2.0
 Description: This is a 'WeChat' Notifier for R users to notice when script run complete. 
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -14,3 +14,5 @@ Authors@R: c(
     person("An Qin", "Researcher", role = c("fnd", "ths")),
     person("Feng Jiang", "Engineer", role = c("ctb"))
   )
+BugReports: https://github.com/xleizi/easyWechat/issues
+URL: http://bj.s1f.ren/gzh/home.html, https://github.com/xleizi/easyWechat

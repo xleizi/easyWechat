@@ -9,11 +9,11 @@ WechatMsg(userid, msg, status = NULL, name = NULL, number = NULL)
 \arguments{
 \item{userid}{Please follow the official WeChat account "shengxintongzhizhushou", reply with id, and scan the QR code to obtain the userid. View "http://bj.s1f.ren/gzh/home.html" and "https://mp.weixin.qq.com/s/tiedh3FWTA4hOhut5Useew" for more information.}
 
-\item{msg}{Content of the notification to be sent.}
+\item{msg}{Content of the notification to be sent. Limit to 20 characters.}
 
-\item{status}{Current data status.}
+\item{status}{Current data status. Limit to 5 Chinese characters.}
 
-\item{name}{Project name.}
+\item{name}{Project name. Limit to 5 characters.}
 
 \item{number}{Notification number.}
 }
@@ -24,5 +24,5 @@ response of the request
 WechatHelper
 }
 \examples{
-WechatMsg(userid = "123", msg = "SaveRds Success!")
+WechatMsg(userid = "123", msg = "test---SaveRds Success!")
 }

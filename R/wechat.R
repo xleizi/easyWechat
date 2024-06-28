@@ -1,16 +1,16 @@
 #' WechatHelper
 #'
 #' @param userid Please follow the official WeChat account "shengxintongzhizhushou", reply with id, and scan the QR code to obtain the userid. View "http://bj.s1f.ren/gzh/home.html" and "https://mp.weixin.qq.com/s/tiedh3FWTA4hOhut5Useew" for more information.
-#' @param msg  Content of the notification to be sent.
-#' @param status Current data status.
-#' @param name Project name.
+#' @param msg  Content of the notification to be sent. Limit to 20 characters.
+#' @param status Current data status. Limit to 5 Chinese characters.
+#' @param name Project name. Limit to 5 characters.
 #' @param number Notification number.
 #'
 #' @return response of the request
 #' @export
 #'
 #' @examples
-#' WechatMsg(userid = "123", msg = "SaveRds Success!")
+#' WechatMsg(userid = "123", msg = "test---SaveRds Success!")
 WechatMsg <- function(userid, msg, status = NULL, name = NULL, number = NULL) {
   base_url <- "http://bj.s1f.ren/gzh/sendMsg"
 
@@ -32,7 +32,7 @@ WechatMsg <- function(userid, msg, status = NULL, name = NULL, number = NULL) {
   response <- httr::GET(base_url, query = query_params)
 
   if (httr::status_code(response) == 200) {
-    httr::content(response, "text", encoding = "UTF-8")
+    return(rawToChar(response$content))
   } else {
     stop("Request failed with status code: ", httr::status_code(response))
   }
@@ -51,7 +51,7 @@ WechatMsg <- function(userid, msg, status = NULL, name = NULL, number = NULL) {
 #' @export
 #'
 #' @examples
-#' WechatRobot(key = "79bdbb23-7f7e-4fb6-b669-97f7e744755e", msg = "SaveRds Success!")
+#' WechatRobot(key = "79bdbb23-7f7e-4fb6-b669-97f7e744755e", msg = "test---SaveRds Success!")
 WechatRobot <- function(key, msg = "", qyapi = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=", msgtype = "text") {
   headers <- c("Content-Type" = "application/json")
   url <- paste0(qyapi, key)
@@ -63,7 +63,8 @@ WechatRobot <- function(key, msg = "", qyapi = "https://qyapi.weixin.qq.com/cgi-
                          body = mypayload,
                          encode = "json"
   )
-  return(response)
+  return(rawToChar(response$content))
+
 }
 
 
